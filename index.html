@@ -93,32 +93,8 @@
             </div>
             <p class="detail-label">Date &amp; Time</p>
             <p class="detail-value">14th June 2026</p>
-            <p class="detail-sub">12:00pm ~ 15:00pm Sunday<br>
-                Guests to be seated by 12:20pm
+            <p class="detail-sub">12:20pm ~ 1:00pm Sunday
             </p>
-        </div>
-        <div class="detail-card reveal reveal-delay-2">
-            <div class="detail-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/>
-                <circle cx="12" cy="10" r="3"/>
-            </svg>
-            </div>
-            <p class="detail-label">Venue</p>
-            <p class="detail-value">Lotus 1</p>
-            <p class="detail-sub">Shangri-La Hotel, 22 Orange Grove Rd, Singapore <br>258350</p>
-        </div>
-        <div class="detail-card reveal reveal-delay-3">
-            <div class="detail-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                <circle cx="9" cy="7" r="4"/>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-            </svg>
-            </div>
-            <p class="detail-label">Contact</p>
-            <p class="detail-value">Phone Number</p>
-            <p class="detail-sub">Groom +65-9751-2824<br/>Bride &nbsp;&nbsp;+65-8505-5095</p>
         </div>
         <div class="detail-card reveal" style="transition-delay:0.4s;">
             <div class="detail-icon">
@@ -175,41 +151,6 @@
             />
             </div>
 
-            <div class="form-group">
-            <label class="form-label" for="side">Groom’s side or Bride’s side *</label>
-            <div class="select-wrapper">
-                <select id="side" name="side" class="form-select" required>
-                <option value="" disabled selected>Groom/Bride Options</option>
-                <option value="groom">Groom</option>
-                <option value="bride">Bride</option>
-                </select>
-            </div>
-            </div>
-
-            <div class="form-group">
-            <label class="form-label" for="guests">Number of accompanying guests</label>
-            <div class="select-wrapper">
-                <select id="guests" name="guests" class="form-select">
-                <option value="Just me (1 guest)">Just me (1 guest)</option>
-                <option value="2 guests">2 guests</option>
-                <option value="3 guests">3 guests</option>
-                <option value="4 guests">4 guests  &amp; above</option>
-                </select>
-            </div>
-            </div>
-
-            <div class="form-group">
-            <label class="form-label" for="foods">Dietary restrictions </label>
-            <div class="select-wrapper">
-                <select id="foods" name="foods" class="form-select">
-                <option value="No allergies">No allergies</option>
-                <option value="Vegetarian">Vegetarian</option>
-                <option value="No beef">No beef</option>
-                </select>
-                <div class="detail-sub">For other dietary requirements, please contact Groom or Bride.</div>
-            </div>
-            </div>
-
             <div id="formError" style="display:none; color:#c0392b; font-size:0.8rem; margin-bottom:16px; padding:12px; background:#fff5f5; border:1px solid #f5c6cb; border-radius:2px; text-align:center;"></div>
 
             <button type="submit" class="submit-btn" id="submitBtn">
@@ -219,48 +160,7 @@
         </div>
     </div>
     </section>
-   <!-- MAP -->
-    <section class="map-section">
-    <div class="section-inner" style="max-width:800px;">
-        <p class="section-tag reveal">Getting there</p>
-        <h2 class="section-title reveal reveal-delay-1">Location</h2>
-        <div class="gold-divider reveal reveal-delay-2" style="justify-content:center;">
-        <span></span><div class="diamond"></div><span></span>
-        </div>
-        <div class="map-container reveal reveal-delay-3">
-        <!--
-            구글 맵 임베드 URL을 아래에 넣으세요.
-            Google Maps -> 공유 -> 지도 삽입 -> HTML 복사 후 src 부분만 교체
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63819.40928453418!2d103.82288681556213!3d1.3486504604778802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da19f472454f5d%3A0x41ef95aa79073f8b!2sShangri-La%20Singapore!5e0!3m2!1sko!2ssg!4v1773668144062!5m2!1sko!2ssg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            -->
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63819.40928453418!2d103.82288681556213!3d1.3486504604778802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da19f472454f5d%3A0x41ef95aa79073f8b!2sShangri-La%20Singapore!5e0!3m2!1sko!2ssg!4v1773668144062!5m2!1sko!2ssg"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Wedding Venue Map">
-        </iframe>
-        <div class="map-overlay-label">
-            <strong>Shangri-La Singapore</strong>
-            22 Orange Grove Rd, Singapore 
-        </div>
-        </div>
-        <div style="display:flex; gap:16px; margin-top:16px; flex-wrap:wrap;" class="reveal">
-        <div style="flex:1; min-width:200px; background:white; border:1px solid var(--border); padding:20px; border-radius:2px;">
-            <p style="font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--sage); margin-bottom:8px; font-weight:600;">Closest MRT</p>
-            <p style="font-size:0.88rem; color:var(--ink); line-height:1.7;">North-South Line Orchard</p>
-        </div>
-        <div style="flex:1; min-width:200px; background:white; border:1px solid var(--border); padding:20px; border-radius:2px;">
-            <p style="font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--sage); margin-bottom:8px; font-weight:600;">Taxi</p>
-            <p style="font-size:0.88rem; color:var(--ink); line-height:1.7;">Grab and Tada would be the best choice</p>
-        </div>
-        <div style="flex:1; min-width:200px; background:white; border:1px solid var(--border); padding:20px; border-radius:2px;">
-            <p style="font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--sage); margin-bottom:8px; font-weight:600;">Parking</p>
-            <p style="font-size:0.88rem; color:var(--ink); line-height:1.7;">Underground parking available</p>
-        </div>
-        </div>
-    </div>
-    </section>
+
     <!-- FOOTER -->
     <footer>
     <p class="footer-names">Benjamin Ang &amp; Hyeyeon Song</p>

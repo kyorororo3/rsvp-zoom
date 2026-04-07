@@ -7,14 +7,11 @@
    ────────────────────────────────────────── */
 const GOOGLE_FORM_CONFIG = {
   // 폼 action URL: https://docs.google.com/forms/d/e/[FORM_ID]/formResponse
-  actionUrl: 'https://docs.google.com/forms/d/e/1FAIpQLScjTbxUaCme3o2v9-MuzJ9TTFvefEvrTwnvXtwiuqTiEz5yGw/formResponse',
+  actionUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSdFtGwZS7u1LnI-IhTZXEgOQTtC-DNKpbGgdtkSQAoCKIxSZg/formResponse',
 //1FAIpQLScjTbxUaCme3o2v9-MuzJ9TTFvefEvrTwnvXtwiuqTiEz5yGw
   // 각 필드의 Entry ID (구글 폼 소스에서 확인)
   fields: {
-    name:       'entry.687788210',   // 이름 필드
-    side:       'entry.78329411',   // 신랑/신부 측
-    guests:     'entry.63150179',   // 동반 인원
-    foods:      'entry.1380975312'    //  foods
+    name:       'entry.2016473050',   // 이름 필드
   }
 };
 
@@ -99,10 +96,6 @@ document.getElementById('rsvpForm').addEventListener('submit', function(e) {
   const errEl = document.getElementById('formError');
 
   const name       = document.getElementById('guestName').value.trim();
-  const side       = document.getElementById('side').value;
-  //const accompany = document.querySelector('input[name="accompany"]:checked');
-  const guests     = document.getElementById('guests').value;
-  const foods    = document.getElementById('foods').value;
 
   // 유효성 검사
   errEl.style.display = 'none';
@@ -110,11 +103,6 @@ document.getElementById('rsvpForm').addEventListener('submit', function(e) {
     errEl.textContent = 'Please enter your name.';
     errEl.style.display = 'block';
     document.getElementById('guestName').focus();
-    return;
-  }
-  if (!side) {
-    errEl.textContent = 'Please select Groom or Bride.';
-    errEl.style.display = 'block';
     return;
   }
 
@@ -126,8 +114,6 @@ document.getElementById('rsvpForm').addEventListener('submit', function(e) {
 
   btn.disabled = true;
   btn.querySelector('span').textContent = 'Submitting...';
-
-  const sideLabel = side === 'groom' ? 'Groom' : 'Bride';
 
   // ─── 구글 폼 제출 (no-cors 방식) ───
   const cfg = GOOGLE_FORM_CONFIG;
@@ -141,14 +127,6 @@ document.getElementById('rsvpForm').addEventListener('submit', function(e) {
 
   const formData = new FormData();
   formData.append(cfg.fields.name,       name);
-  formData.append(cfg.fields.side,       sideLabel);
-  //formData.append(cfg.fields.accompany, accompany.value);
-  formData.append(cfg.fields.guests,     guests);
-  formData.append(cfg.fields.foods,      foods);
-  //if (foods) formData.append(cfg.fields.foods, foods);
-console.log(sideLabel);
-console.log(guests);
-console.log(foods);
 
   fetch(cfg.actionUrl, {
     method: 'POST',
